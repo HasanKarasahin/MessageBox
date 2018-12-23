@@ -3,12 +3,13 @@ package com.example.hasan.messagebox;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.widget.Toast;
 
 public class MessageBox {
 
     interface IListener {
-        void testFunk();
+        void ok_Click();
+
+        void cancel_Click();
     }
 
     enum MODE {
@@ -41,14 +42,13 @@ public class MessageBox {
         builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(context, "OK.", Toast.LENGTH_SHORT).show();
-                iListener.testFunk();
+                iListener.ok_Click();
             }
         });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(context, "Cancel", Toast.LENGTH_SHORT).show();
+                iListener.cancel_Click();
             }
         });
         builder.show();
