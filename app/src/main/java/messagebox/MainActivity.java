@@ -1,9 +1,11 @@
-package com.example.hasan.messagebox;
+package messagebox;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import com.example.hasan.messagebox.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,20 +32,14 @@ public class MainActivity extends AppCompatActivity {
     class btListener implements MessageBox.IListener {
 
         @Override
-        public void testFunk() {
-            Toast.makeText(MainActivity.this, "TestFunk", Toast.LENGTH_SHORT).show();
+        public void ok_Click() {
+            //onaylandı
+        }
+
+        @Override
+        public void cancel_Click() {
+            //onaylanmadı
         }
     }
 
 }
-
-/*
-
-MessageBox.show(MainActivity.this, MessageBox.MODE.ADD, new MessageBox.IListener() {
-            @Override
-            public void testFunk() {
-                Toast.makeText(MainActivity.this, "Zaa", Toast.LENGTH_SHORT).show();
-            }
-        });
-
- */

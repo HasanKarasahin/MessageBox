@@ -1,8 +1,10 @@
-package com.example.hasan.messagebox;
+package messagebox;
 
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+
+import com.example.hasan.messagebox.R;
 
 public class MessageBox {
 
